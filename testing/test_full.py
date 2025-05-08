@@ -151,8 +151,12 @@ def prerequisites_constructTrainingCSV():
         if item.endswith(".csv"):
             os.remove(os.path.join(inputDir, item))
 
+    print(f"Input dir: {inputDir}")
     for application_data in os.listdir(inputDir):
         currentApplicationDir = os.path.join(inputDir, application_data)
+
+        print(f"Application data: {application_data}")
+        print(f"Current application dir: {currentApplicationDir}")
 
         if "2d_rad_segmentation" in application_data:
             channelsID = "image.png"
